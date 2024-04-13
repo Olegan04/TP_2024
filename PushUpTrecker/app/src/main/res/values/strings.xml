@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PushUpTrecker</string>
-    <string name="title_profile">Home</string>
-    <string name="title_rating">Dashboard</string>
-    <string name="title_training">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_rating">Rating</string>
+    <string name="title_training">Training</string>
     <string name="title_settings">Settings</string>
 </resources>
