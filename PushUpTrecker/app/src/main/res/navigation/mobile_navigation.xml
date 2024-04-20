@@ -23,8 +23,11 @@
         android:label="@string/title_training"
         tools:layout="@layout/fragment_training" />
     <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.pushuptrecker.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />    <fragment
         android:id="@+id/navigation_registration"
         android:name="com.example.pushuptrecker.ui.registration_form.RegistrationFragment"
         android:label="@string/title_training"
-        tools:layout="@layout/fragment_training" />
-</navigation>
+        tools:layout="@layout/fragment_training" /></navigation>
