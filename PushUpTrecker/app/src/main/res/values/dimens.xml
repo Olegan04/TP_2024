@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin_medium">16dp</dimen>
     <dimen name="activity_vertical_margin_small">16dp</dimen>
     <dimen name="nav_menu_height">5dp</dimen>
+    <dimen name="activity_vertical_margin_big">24dp</dimen>
 </resources>
