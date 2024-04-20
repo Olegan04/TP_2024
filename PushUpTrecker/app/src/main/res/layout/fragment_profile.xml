@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/nav_menu_height"
+    android:layout_marginTop="@dimen/fragment_top_margin"
     tools:context=".ui.profile.ProfileFragment">
 
     <ImageView
@@ -51,40 +51,41 @@
 
     <TextView
         android:id="@+id/profile_age"
-        android:layout_width="235dp"
-        android:minHeight="24dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_name"
         app:layout_constraintStart_toStartOf="@+id/image_profile" />
     <TextView
         android:id="@+id/profile_sex"
-        android:layout_width="235dp"
-        android:minHeight="24dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_age"
         app:layout_constraintStart_toStartOf="@+id/image_profile" />
     <TextView
         android:id="@+id/profile_location"
-        android:layout_width="235dp"
-        android:minHeight="24dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_sex"
         app:layout_constraintStart_toStartOf="@+id/image_profile" />
     <TextView
         android:id="@+id/profile_description"
-        android:layout_width="235dp"
-        android:minHeight="24dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_location"
         app:layout_constraintStart_toStartOf="@+id/image_profile" />
     <ListView
         android:id="@+id/list_profile_links"
-        android:layout_width="235dp"
-        android:layout_height="180dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_description"
         app:layout_constraintStart_toStartOf="@+id/image_profile"

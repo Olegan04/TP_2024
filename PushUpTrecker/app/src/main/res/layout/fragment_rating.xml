@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/nav_menu_height"
+    android:layout_marginTop="@dimen/fragment_top_margin"
     tools:context=".ui.rating.RatingFragment">
 
     <TextView
         android:id="@+id/statistics_day_in_row"
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_big"
         android:minHeight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,8 +20,9 @@
 
     <Spinner
         android:id="@+id/statistics_spinner_kind_of_training"
-        android:layout_width="235dp"
-        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_big"
         android:minHeight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,8 +31,9 @@
 
     <TextView
         android:id="@+id/statistics_for_day"
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_big"
         android:minHeight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +42,9 @@
 
     <TextView
         android:id="@+id/statistics_for_week"
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_big"
         android:minHeight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,8 +53,9 @@
 
     <TextView
         android:id="@+id/statistics_for_month"
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_big"
         android:minHeight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,8 +64,9 @@
 
     <TextView
         android:id="@+id/statistics_for_year"
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_big"
         android:minHeight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,8 +75,9 @@
 
     <TextView
         android:id="@+id/statistics_for_all_time"
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_big"
         android:minHeight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,9 +85,10 @@
         app:layout_constraintTop_toBottomOf="@id/statistics_for_year" />
 
     <Button
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+        android:layout_marginHorizontal="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

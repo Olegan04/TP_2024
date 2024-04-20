@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PushUpTrecker</string>
+    <string name="app_name">PushUpTracker</string>
     <string name="title_profile">Profile</string>
     <string name="title_rating">Rating</string>
     <string name="title_training">Training</string>
