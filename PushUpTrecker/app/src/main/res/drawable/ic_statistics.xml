@@ -17,4 +17,4 @@
         android:fillColor="@color/icon_accent"
         android:strokeWidth="1"
         android:pathData="M191 160L192 222L222 222L222 160L192 160z" />
-    </vector>
+</vector>
