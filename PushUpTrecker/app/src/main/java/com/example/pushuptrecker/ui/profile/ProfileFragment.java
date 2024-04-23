@@ -53,10 +53,6 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 nameEdt.getLayoutParams().
-                ageEdt;
-                sexEdt;
-                locationEdt;
-                linksLV;
             }
         });
 
