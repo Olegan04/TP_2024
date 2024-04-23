@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/nav_menu_height"
+    android:layout_marginTop="@dimen/fragment_top_margin"
     tools:context=".ui.profile.ProfileFragment">
-
     <ImageView
         android:id="@+id/image_profile"
         android:layout_width="236dp"
@@ -18,15 +18,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/image_profile_setting"
+        android:id="@+id/image_profile_edit"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="8dp"
+        android:background="?android:attr/panelBackground"
         android:contentDescription="TODO"
-        app:layout_constraintTop_toTopOf="@+id/image_profile"
-        app:layout_constraintRight_toRightOf="@+id/image_profile" />
+        android:src="@drawable/ic_edit"
+        app:layout_constraintRight_toRightOf="@+id/image_profile"
+        app:layout_constraintTop_toTopOf="@+id/image_profile" />
 
-    <TextView
+    <EditText
         android:id="@+id/profile_name"
         android:text="User_name"
         android:textAlignment="center"
@@ -36,55 +38,59 @@
         android:layout_marginVertical="@dimen/activity_vertical_margin_medium"
         app:layout_constraintTop_toBottomOf="@+id/image_profile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/profile_settings" />
+        app:layout_constraintEnd_toStartOf="@id/profile_edit" />
 
     <ImageButton
-        android:id="@+id/profile_settings"
+        android:id="@+id/profile_edit"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_medium"
+        android:background="?android:attr/panelBackground"
         android:contentDescription="TODO"
-        app:layout_constraintStart_toEndOf="@+id/profile_name"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_edit"
         app:layout_constraintBottom_toBottomOf="@id/profile_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_name"
         app:layout_constraintTop_toTopOf="@id/profile_name" />
 
-    <TextView
+    <EditText
         android:id="@+id/profile_age"
-        android:layout_width="235dp"
-        android:minHeight="24dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-        app:layout_constraintTop_toBottomOf="@+id/profile_name"
-        app:layout_constraintStart_toStartOf="@+id/image_profile" />
-    <TextView
+        android:text="UserName"
+        app:layout_constraintStart_toStartOf="@+id/image_profile"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+    <EditText
         android:id="@+id/profile_sex"
-        android:layout_width="235dp"
-        android:minHeight="24dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_age"
         app:layout_constraintStart_toStartOf="@+id/image_profile" />
-    <TextView
+    <EditText
         android:id="@+id/profile_location"
-        android:layout_width="235dp"
-        android:minHeight="24dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_sex"
         app:layout_constraintStart_toStartOf="@+id/image_profile" />
-    <TextView
+    <EditText
         android:id="@+id/profile_description"
-        android:layout_width="235dp"
-        android:minHeight="24dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_location"
         app:layout_constraintStart_toStartOf="@+id/image_profile" />
     <ListView
         android:id="@+id/list_profile_links"
-        android:layout_width="235dp"
-        android:layout_height="180dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
         android:layout_marginVertical="@dimen/activity_vertical_margin_small"
         app:layout_constraintTop_toBottomOf="@+id/profile_description"
         app:layout_constraintStart_toStartOf="@+id/image_profile"

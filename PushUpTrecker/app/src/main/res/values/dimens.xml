@@ -3,6 +3,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin_medium">16dp</dimen>
     <dimen name="activity_vertical_margin_small">16dp</dimen>
-    <dimen name="nav_menu_height">5dp</dimen>
     <dimen name="activity_vertical_margin_big">24dp</dimen>
+    <dimen name="fragment_top_margin">5dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
