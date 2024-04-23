@@ -7,92 +7,111 @@
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/fragment_top_margin"
     tools:context=".ui.profile.ProfileFragment">
-    <ImageView
-        android:id="@+id/image_profile"
-        android:layout_width="236dp"
-        android:layout_height="236dp"
-        android:layout_marginVertical="@dimen/activity_vertical_margin_medium"
-        android:contentDescription="TODO"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/image_profile_edit"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:background="?android:attr/panelBackground"
-        android:contentDescription="TODO"
-        android:src="@drawable/ic_edit"
-        app:layout_constraintRight_toRightOf="@+id/image_profile"
-        app:layout_constraintTop_toTopOf="@+id/image_profile" />
-
-    <EditText
-        android:id="@+id/profile_name"
-        android:text="User_name"
-        android:textAlignment="center"
-        android:layout_width="235dp"
-        android:minHeight="48dp"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/activity_vertical_margin_medium"
-        app:layout_constraintTop_toBottomOf="@+id/image_profile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/profile_edit" />
-
-    <ImageButton
-        android:id="@+id/profile_edit"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginVertical="@dimen/activity_vertical_margin_medium"
-        android:background="?android:attr/panelBackground"
-        android:contentDescription="TODO"
-        android:src="@drawable/ic_edit"
-        app:layout_constraintBottom_toBottomOf="@id/profile_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profile_name"
-        app:layout_constraintTop_toTopOf="@id/profile_name" />
+        android:scrollbars="none">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
 
-    <EditText
-        android:id="@+id/profile_age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="72dp"
-        android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-        android:text="UserName"
-        app:layout_constraintStart_toStartOf="@+id/image_profile"
-        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
-    <EditText
-        android:id="@+id/profile_sex"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="72dp"
-        android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-        app:layout_constraintTop_toBottomOf="@+id/profile_age"
-        app:layout_constraintStart_toStartOf="@+id/image_profile" />
-    <EditText
-        android:id="@+id/profile_location"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="72dp"
-        android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-        app:layout_constraintTop_toBottomOf="@+id/profile_sex"
-        app:layout_constraintStart_toStartOf="@+id/image_profile" />
-    <EditText
-        android:id="@+id/profile_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="72dp"
-        android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-        app:layout_constraintTop_toBottomOf="@+id/profile_location"
-        app:layout_constraintStart_toStartOf="@+id/image_profile" />
-    <ListView
-        android:id="@+id/list_profile_links"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="72dp"
-        android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-        app:layout_constraintTop_toBottomOf="@+id/profile_description"
-        app:layout_constraintStart_toStartOf="@+id/image_profile"
-        android:scrollbars="none"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageButton
+                    android:id="@+id/image_profile_edit"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:background="?android:attr/panelBackground"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintRight_toRightOf="@+id/image_profile"
+                    app:layout_constraintTop_toTopOf="@+id/image_profile" />
+
+                <ImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="236dp"
+                    android:layout_height="236dp"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin_medium"
+                    android:contentDescription="TODO" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/profile_name"
+                    android:text="User_name"
+                    android:textAlignment="center"
+                    android:layout_width="235dp"
+                    android:minHeight="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin_medium"
+                    app:layout_constraintTop_toBottomOf="@+id/image_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/profile_edit" />
+
+                <ImageButton
+                    android:id="@+id/profile_edit"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin_medium"
+                    android:background="?android:attr/panelBackground"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/profile_name"
+                    app:layout_constraintTop_toTopOf="@id/profile_name" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/profile_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="72dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+                android:text="UserName"
+                app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+            <EditText
+                android:id="@+id/profile_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="72dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+                app:layout_constraintTop_toBottomOf="@+id/profile_age"/>
+            <EditText
+                android:id="@+id/profile_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="72dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+                app:layout_constraintTop_toBottomOf="@+id/profile_sex"/>
+            <EditText
+                android:id="@+id/profile_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="72dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+                app:layout_constraintTop_toBottomOf="@+id/profile_location" />
+            <ListView
+                android:id="@+id/list_profile_links"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="72dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+                app:layout_constraintTop_toBottomOf="@+id/profile_description"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

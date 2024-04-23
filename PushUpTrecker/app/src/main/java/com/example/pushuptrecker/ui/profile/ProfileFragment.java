@@ -21,6 +21,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.pushuptrecker.databinding.FragmentProfileBinding;
 
 public class ProfileFragment extends Fragment {
+    final private int GALLERY_REQUEST = 1;
     private ImageButton editImageIBtn;
     private ImageButton editProfileIBtn;
     private ImageView profileIV;
@@ -38,35 +39,30 @@ public class ProfileFragment extends Fragment {
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        profileIV = binding.imageProfile;
+        nameEdt = binding.profileName;
+        ageEdt = binding.profileAge;
+        sexEdt = binding.profileSex;
+        locationEdt = binding.profileLocation;
+
+        linksLV = binding.listProfileLinks;
         editImageIBtn = binding.imageProfileEdit;
+
         editImageIBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent();
                 i.setType("image/*");
                 i.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(i, "Select Picture"), 1);
+                startActivityForResult(Intent.createChooser(i, "Select Picture"), GALLERY_REQUEST);
             }
         });
         editProfileIBtn = binding.profileEdit;
         editProfileIBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nameEdt.getLayoutParams().
-                ageEdt;
-                sexEdt;
-                locationEdt;
-                linksLV;
             }
         });
-
-        profileIV = binding.imageProfile;
-
-        nameEdt = binding.profileName;
-        ageEdt = binding.profileAge;
-        sexEdt = binding.profileSex;
-        locationEdt = binding.profileLocation;
-        linksLV = binding.listProfileLinks;
         return root;
     }
 
@@ -80,9 +76,9 @@ public class ProfileFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == RESULT_OK) {
-            if (requestCode == 1) {
+            if (requestCode == GALLERY_REQUEST) {
                 Uri selectedImageUri = data.getData();
-                if (null != selectedImageUri) {
+                if (selectedImageUri != null) {
                     profileIV.setImageURI(selectedImageUri);
                 }
             }
