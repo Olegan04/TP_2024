@@ -1,7 +1,4 @@
 package com.example.pushuptrecker.ui.registration_form;
-
-import android.app.Application;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -10,14 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.pushuptrecker.MainActivity;
 import com.example.pushuptrecker.R;
 import com.example.pushuptrecker.databinding.FragmentRegistrationFormBinding;
 
