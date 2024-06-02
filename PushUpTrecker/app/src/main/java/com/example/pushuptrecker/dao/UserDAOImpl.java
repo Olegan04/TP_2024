@@ -8,9 +8,8 @@ import org.hibernate.Transaction;
 import com.example.pushuptrecker.models.UserTrainingID;
 import com.example.pushuptrecker.utils.HibernateSessionFactoryUtil;
 import java.util.List;
-
 import java.util.List;
-
+import javax.naming.Referenceable;
 public class UserDAOImpl implements UserDAO{
     @Override
     public User findById(int id) {
@@ -46,11 +45,5 @@ public class UserDAOImpl implements UserDAO{
     @Override
     public PushUp findPushUpById(UserTrainingID id) {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(PushUp.class, id);
-    }
-
-    @Override
-    public List<User> findAll() {
-        List<User> users = (List<User>)  HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From User").list();
-        return users;
     }
 }

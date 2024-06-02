@@ -15,5 +15,5 @@ public interface UserDAO {
 
     public PushUp findPushUpById(UserTrainingID id);
 
-    public List<User> findAll();
+
 }
