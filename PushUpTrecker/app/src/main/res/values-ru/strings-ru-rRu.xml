@@ -5,5 +5,7 @@
     <string name="title_rating">Рейтинг</string>
     <string name="title_training">Тренировки</string>
     <string name="title_settings">Настройки</string>
-    <string name="connect_to_device">Подключиться к устройству</string>
+    <string name="find_devices">Найти устройства</string>
+    <string name="already_registered">Уже зарегистрирован</string>
+    <string name="submit">Подтвердить</string>
 </resources>

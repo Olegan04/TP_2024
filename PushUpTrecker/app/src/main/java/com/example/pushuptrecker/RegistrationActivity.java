@@ -1,12 +1,11 @@
 package com.example.pushuptrecker;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RegistrationActivity extends AppCompatActivity {
     private Button submitBtn;
@@ -22,26 +21,21 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        loginEdt = findViewById(R.id.form_login);
-        passwordEdt = findViewById(R.id.form_password);
-        confirmPasswordEdt = findViewById(R.id.form_confirm_password);
-        nameEdt = findViewById(R.id.form_name);
-        ageEdt = findViewById(R.id.form_age);
-        sexEdt = findViewById(R.id.form_sex);
-        locationEdt = findViewById(R.id.form_location);
-        submitBtn = findViewById(R.id.submitBtn);
-        alreadyRegisteredBtn = findViewById(R.id.alreadyRegisteredBtn);
-        submitBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        loginEdt = findViewById(R.id.formLoginEdt);
+        passwordEdt = findViewById(R.id.formPasswordEdt);
+        confirmPasswordEdt = findViewById(R.id.formConfirmPasswordEdt);
+        nameEdt = findViewById(R.id.formNameEdt);
+        ageEdt = findViewById(R.id.formAgeEdt);
+        sexEdt = findViewById(R.id.formSexEdt);
+        locationEdt = findViewById(R.id.formLocationEdt);
 
-            }
+        submitBtn = findViewById(R.id.submitBtn);
+        submitBtn.setOnClickListener(v ->{
+
         });
-        alreadyRegisteredBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent();
-            }
+        alreadyRegisteredBtn = findViewById(R.id.alreadyRegisteredBtn);
+        alreadyRegisteredBtn.setOnClickListener(v->{
+            Intent i = new Intent();
         });
     }
 }

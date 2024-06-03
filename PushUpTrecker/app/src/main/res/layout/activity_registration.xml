@@ -1,113 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegistrationActivity"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegistrationActivity">
-    <ScrollView
-        android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:scrollbars="none">
+    <LinearLayout
         android:layout_width="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:scrollbars="none">
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/formLoginEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+            android:hint="login@google.com"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/formPasswordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/formConfirmPasswordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+            android:hint="Confirm password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/formNameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+            android:hint="Name"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/formAgeEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+            android:hint="Birth date"
+            android:inputType="date"/>
+
+        <EditText
+            android:id="@+id/formSexEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+            android:hint="Sex" />
+
+        <EditText
+            android:id="@+id/formLocationEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_small"
+            android:hint="City, Country" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/form_login"
+            <Button
+                android:id="@+id/alreadyRegisteredBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="72dp"
-                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-                android:hint="login@google.com"
-                android:inputType="textEmailAddress"
-                app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin_small"
+                android:text="@string/already_registered" />
 
-            <EditText
-                android:id="@+id/form_password"
+            <Button
+                android:id="@+id/submitBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="72dp"
-                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-                android:hint="Password"
-                android:inputType="textPassword"
-                app:layout_constraintTop_toBottomOf="@+id/profile_name" />
-
-            <EditText
-                android:id="@+id/form_confirm_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="72dp"
-                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-                android:hint="Confirm password"
-                android:inputType="textPassword"
-                app:layout_constraintTop_toBottomOf="@+id/profile_name" />
-
-            <EditText
-                android:id="@+id/form_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="72dp"
-                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-                android:hint="Name"
-                android:inputType="textPersonName"
-                app:layout_constraintTop_toBottomOf="@+id/profile_name" />
-
-            <EditText
-                android:id="@+id/form_age"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="72dp"
-                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-                android:hint="Birth date"
-                android:inputType="date"
-                app:layout_constraintTop_toBottomOf="@+id/profile_name" />
-
-            <EditText
-                android:id="@+id/form_sex"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="72dp"
-                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-                android:hint="Gender"
-                app:layout_constraintTop_toBottomOf="@+id/profile_age" />
-
-            <EditText
-                android:id="@+id/form_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="72dp"
-                android:layout_marginVertical="@dimen/activity_vertical_margin_small"
-                android:hint="City, Country"
-                app:layout_constraintTop_toBottomOf="@+id/profile_sex" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/alreadyRegisteredBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/activity_vertical_margin_medium"
-                    android:text="@string/already_registered"/>
-
-                <Button
-                    android:id="@+id/submitBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/activity_vertical_margin_medium"
-                    android:text="@string/submit"/>
-            </LinearLayout>
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin_small"
+                android:text="@string/submit"/>
         </LinearLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
