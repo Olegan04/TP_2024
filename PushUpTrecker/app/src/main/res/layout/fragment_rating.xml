@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.rating.RatingFragment"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:scrollbars="none">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/dayInRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+            android:minHeight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/typeOfTraining"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+            android:minHeight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dayInRow" />
+
+        <TextView
+            android:id="@+id/forDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+            android:minHeight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/typeOfTraining" />
+
+        <TextView
+            android:id="@+id/forWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+            android:minHeight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forDay" />
+
+        <TextView
+            android:id="@+id/forMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+            android:minHeight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forWeek" />
+
+        <TextView
+            android:id="@+id/forYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+            android:minHeight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forMonth" />
+
+        <TextView
+            android:id="@+id/forAllTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+            android:minHeight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forYear" />
+
+        <Button
+            android:id="@+id/toLeaderboardBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginVertical="@dimen/activity_vertical_margin_big"
+            android:layout_marginHorizontal="72dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+</ScrollView>

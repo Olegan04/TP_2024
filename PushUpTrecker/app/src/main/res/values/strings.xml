@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PushUpTracker</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_rating">Rating</string>
+    <string name="title_training">Training</string>
+    <string name="title_settings">Settings</string>
+    <string name="find_devices">Find devices</string>
+    <string name="already_registered">Already reg</string>
+    <string name="submit">Submit</string>
+</resources>
