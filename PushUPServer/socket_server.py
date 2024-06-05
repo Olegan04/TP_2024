@@ -8,7 +8,7 @@ import time
 import threading
 #import cv2
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(("10.114.7.4", 3030))
+s.bind(("192.168.5.136", 3030))
 s.listen()
 s.setblocking(False)
 sel = selectors.DefaultSelector()
@@ -180,10 +180,11 @@ def checkTime():
             newYear()
         
         time.sleep(600)
+
 try:
+    thread = threading.Thread(target=checkTime)
+    thread.start()
     while True:
-        thread = threading.Thread(target=checkTime)
-        thread.start()
         data = sel.select(timeout=None)
         for key, mask in data:
             if key.data is None:
