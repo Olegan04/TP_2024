@@ -8,7 +8,7 @@ import time
 import threading
 #import cv2
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(("192.168.5.136", 3030))
+s.bind(("10.114.7.4", 3030))
 s.listen()
 s.setblocking(False)
 sel = selectors.DefaultSelector()
