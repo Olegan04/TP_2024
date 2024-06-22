@@ -119,9 +119,7 @@ def service_connection(key, mask):
             request = recvData.decode('utf-8')
             code = int(request[0:3])    
             request = re.sub(r'.','',request, count = 4)
-            print(request)
             answer = processingRequest(request, code)
-            print(answer)
             data.outb += answer.encode('ascii')
         else:
             print(f"Closing connection to {data.addr}")

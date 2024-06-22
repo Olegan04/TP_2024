@@ -19,7 +19,6 @@ def InsertUser(user):
     posgres = "select id_user from users where binding = %s"
     cur.execute(posgres, (user[0],))
     p = cur.fetchall()
-    print(str(p[0][0]))
     posgres = "INSERT INTO push_ups (id_user, id_training, calibration, quantity_per_day, quantity_per_month, quantity_per_year, quantity_per_all_time) VALUES (%s, 1, 0, 0, 0, 0, 0)"
     cur.execute(posgres, (str(p[0][0]), ))
     conn.commit()  
@@ -130,7 +129,6 @@ def setStatistic(idTraining, timeInterval, x, y):
         cur.execute(posgres, (idTraining, x, y, ))
         p = cur.fetchall()
     except DatabaseError as e:
-        print (str(e))
         return -110
     return p
 
