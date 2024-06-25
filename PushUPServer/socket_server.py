@@ -14,7 +14,6 @@ s.setblocking(False)
 sel = selectors.DefaultSelector()
 sel.register(s, selectors.EVENT_READ, data=None)
 
-#conn, addr = s.accept()
 
 def getId(query):
     email, password = query.split('#')
